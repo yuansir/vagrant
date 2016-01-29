@@ -1,8 +1,9 @@
-### 平时开发用的Vagrant 配置
+### 可以用在平时开发用的Vagrant环境和配置
 
 #### Box
 
 - [ubuntu-14.04-amd64.box](https://github.com/kraksoft/vagrant-box-ubuntu/releases/download/14.04/ubuntu-14.04-amd64.box)
+- `vagrant box add ubuntu/fuck path/to/ubuntu-14.04-amd64.box`
 
 #### 目录文件说明
 
@@ -47,22 +48,11 @@
 - 添加Nginx配置文件 `phpmyadmin.dev.conf`  到 `etc/nginx` 目录下
 - 将phpmyadmin源码程序放入 `projects/` 目录下
 - 进入vagrant reload or restart nginx
-- 浏览器访问 `phpmyadmin.dev:9999 `
+- 浏览器访问 `phpmyadmin.dev:9999`
 
 #### 补充
 
-- 如果以上软件安装失败，可以进入vagrant 后执行对应的安装脚本，比如 `/vagrant/scripts/redis.sh` 
+- 如果以上软件安装失败，可以进入vagrant 后执行对应的安装脚本，比如 `/vagrant/scripts/redis.sh`
 - 需要安装其他软家可在`scripts/` 下自行添加
-
-
-
-
-
-
-
-
-
-
-
-
-
+- MySql 默认 root 密码 12345
+- 对应的端口映射请到 `Vagrantfile` 自行更改
